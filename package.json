@@ -1,0 +1,26 @@
+{
+  "name": "callcaddy.ai",
+  "version": "1.0.0",
+  "description": "CallCaddy.ai – Website &amp; API for 24/7 AI receptionist MVP",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marxus99/callcaddy.ai.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/marxus99/callcaddy.ai/issues"
+  },
+  "homepage": "https://github.com/marxus99/callcaddy.ai#readme",
+  "dependencies": {
+    "next": "^15.3.3",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  }
+}
