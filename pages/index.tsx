@@ -2,42 +2,58 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gray-50">
+    <main className="min-h-screen bg-black text-white flex flex-col">
       {/* Hero */}
-      <section className="bg-white text-center py-20">
-        <h1 className="text-5xl font-extrabold mb-4">Welcome to CallCaddy.ai</h1>
-        <p className="text-lg text-gray-600 mb-8">
-          24/7 AI receptionist that books appointments, answers FAQs, and drives revenue.
+      <section className="flex-grow flex flex-col items-center justify-center px-4 text-center">
+        <h1 className="text-6xl font-extrabold mb-6">Meet Your 24/7 AI Call Caddy</h1>
+        <p className="max-w-2xl text-lg mb-8">
+          Never miss another call—our AI receptionist answers, qualifies, and books your appointments, day or night.
         </p>
-        <Link href="/how-it-works">
-          <a className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
-            How It Works
-          </a>
-        </Link>
-      </section>
-
-      {/* Preview Sections */}
-      <section className="py-16 container mx-auto grid gap-12 md:grid-cols-3">
-        <div className="bg-white p-6 rounded-lg shadow">
-          <h2 className="text-2xl font-semibold mb-2">AI-Powered Calls</h2>
-          <p className="text-gray-600">Instantly answer and route calls with human-like fluency.</p>
-        </div>
-        <div className="bg-white p-6 rounded-lg shadow">
-          <h2 className="text-2xl font-semibold mb-2">Seamless Scheduling</h2>
-          <p className="text-gray-600">Auto-book appointments into your calendar.</p>
-        </div>
-        <div className="bg-white p-6 rounded-lg shadow">
-          <h2 className="text-2xl font-semibold mb-2">Cost-Efficient</h2>
-          <p className="text-gray-600">Lower backend spend and boost your margins.</p>
+        <div className="space-x-4">
+          <Link href="/how-it-works">
+            <a className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-full font-medium">
+              How It Works
+            </a>
+          </Link>
+          <Link href="/pricing">
+            <a className="px-8 py-3 border border-white hover:bg-white hover:text-black rounded-full font-medium">
+              View Pricing
+            </a>
+          </Link>
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="bg-blue-600 text-white text-center py-12">
-        <h3 className="text-3xl font-bold mb-4">Ready to elevate your customer experience?</h3>
-        <Link href="/pricing">
-          <a className="px-6 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100">
-            View Pricing
+      {/* Features */}
+      <section className="py-16 bg-gray-900">
+        <div className="container mx-auto grid gap-12 md:grid-cols-3 px-4">
+          {[
+            {
+              title: 'AI-Powered Calls',
+              desc: 'Human-like speech recognition & routing.',
+            },
+            {
+              title: 'Instant Scheduling',
+              desc: 'Auto-book into your calendar in real time.',
+            },
+            {
+              title: 'Cost Savings',
+              desc: 'Slash your after-hours labor costs by 80%.',
+            },
+          ].map((f) => (
+            <div key={f.title} className="text-center">
+              <h3 className="text-2xl font-semibold mb-2">{f.title}</h3>
+              <p className="text-gray-400">{f.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* CTA Footer */}
+      <section className="py-12 text-center">
+        <h2 className="text-3xl font-bold mb-4">Ready to transform your front desk?</h2>
+        <Link href="/contact">
+          <a className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-full font-medium">
+            Get Started
           </a>
         </Link>
       </section>
