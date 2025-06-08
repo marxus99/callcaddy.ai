@@ -8,16 +8,18 @@ export default function Home() {
   ];
 
   return (
-    <main className="bg-black text-white min-h-screen flex flex-col">
+    <main className="bg-black text-white min-h-screen flex flex-col space-y-12">
       {/* Hero */}
-      <section className="flex-grow flex items-center justify-center px-6 text-center">
-        <div>
-          <h1 className="text-6xl font-extrabold mb-4">Meet Your 24/7 AI Call Caddy</h1>
-          <p className="text-lg mb-8 max-w-2xl mx-auto">
-            Never miss another call—our AI receptionist answers, qualifies, and books your
-            appointments, day or night.
+      <section className="flex-grow flex items-center justify-center">
+        <div className="text-center space-y-6 px-8 max-w-2xl">
+          <h1 className="text-5xl md:text-6xl font-extrabold">
+            Meet Your 24/7 AI Call Caddy
+          </h1>
+          <p className="text-lg md:text-xl">
+            Never miss another call—our AI receptionist answers, qualifies, and books your appointments,
+            day or night.
           </p>
-          <div className="flex justify-center gap-4">
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/how-it-works">
               <a className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-full font-medium">
                 How It Works
@@ -33,39 +35,42 @@ export default function Home() {
       </section>
 
       {/* Features */}
-      <section className="py-8 bg-gray-900">
-        <div className="container mx-auto px-6 grid gap-6 md:grid-cols-3">
+      <section className="px-8">
+        <div className="container mx-auto grid gap-8 md:grid-cols-3">
           {features.map((f) => (
-            <div key={f.title} className="text-center">
+            <div
+              key={f.title}
+              className="bg-gray-800 p-8 rounded-lg text-center flex flex-col"
+            >
               <h3 className="text-2xl font-semibold mb-2">{f.title}</h3>
-              <p className="text-gray-400">{f.desc}</p>
+              <p className="text-gray-400 flex-grow">{f.desc}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* About / What / How */}
-      <section className="py-16 bg-black px-6">
-        <div className="container mx-auto space-y-12 text-center">
-          <div>
-            <h2 className="text-4xl font-bold mb-4">Who We Are</h2>
-            <p className="text-gray-300 max-w-3xl mx-auto">
-              At CallCaddy.ai, we’re a team of AI and customer-experience experts on a
-              mission to revolutionize how small businesses handle calls.
+      <section className="px-8 space-y-12">
+        <div className="container mx-auto max-w-3xl space-y-12 text-center">
+          <div className="space-y-4">
+            <h2 className="text-3xl md:text-4xl font-bold">Who We Are</h2>
+            <p className="text-gray-300">
+              At CallCaddy.ai, we’re a team of AI and customer-experience experts on a mission
+              to revolutionize how small businesses handle calls. We blend cutting-edge AI with
+              real-world insights to make every interaction seamless and every lead captured.
             </p>
           </div>
-
-          <div>
-            <h2 className="text-4xl font-bold mb-4">What We Do</h2>
-            <p className="text-gray-300 max-w-3xl mx-auto">
-              Our 24/7 AI receptionist answers calls, qualifies prospects, and books
-              appointments right into your calendar.
+          <div className="space-y-4">
+            <h2 className="text-3xl md:text-4xl font-bold">What We Do</h2>
+            <p className="text-gray-300">
+              Our 24/7 AI receptionist answers calls, qualifies prospects, and books appointments
+              directly into your calendar. Automate your front desk to reduce overhead, never miss
+              a call, and boost revenue—all while preserving your brand’s unique voice.
             </p>
           </div>
-
-          <div>
-            <h2 className="text-4xl font-bold mb-4">How It Works</h2>
-            <ol className="list-decimal list-inside space-y-4 text-gray-300 max-w-3xl mx-auto text-left md:text-center">
+          <div className="space-y-4">
+            <h2 className="text-3xl md:text-4xl font-bold">How It Works</h2>
+            <ol className="list-decimal list-inside text-gray-300 space-y-2 text-left md:text-center">
               <li>
                 <strong>Integration:</strong> Connect your phone system and calendar in just minutes.
               </li>
@@ -73,8 +78,8 @@ export default function Home() {
                 <strong>Customization:</strong> Tailor call flows and FAQs to match your brand voice.
               </li>
               <li>
-                <strong>Go Live:</strong> Our AI picks up calls, qualifies leads, and schedules
-                them instantly—day or night.
+                <strong>Go Live:</strong> Our AI picks up calls, qualifies leads, and schedules them
+                instantly—day or night.
               </li>
             </ol>
           </div>
@@ -82,13 +87,17 @@ export default function Home() {
       </section>
 
       {/* CTA Footer */}
-      <section className="py-12 bg-gray-900 text-center px-6">
-        <h2 className="text-3xl font-bold mb-4">Ready to transform your front desk?</h2>
-        <Link href="/contact">
-          <a className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-full font-medium">
-            Get Started
-          </a>
-        </Link>
+      <section className="px-8">
+        <div className="container mx-auto text-center">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">
+            Ready to transform your front desk?
+          </h2>
+          <Link href="/contact">
+            <a className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-full font-medium">
+              Get Started
+            </a>
+          </Link>
+        </div>
       </section>
     </main>
   );
