@@ -33,8 +33,8 @@ export default function Home() {
       </section>
 
       {/* Features */}
-      <section className="py-16 bg-gray-900">
-        <div className="container mx-auto px-6 grid gap-12 md:grid-cols-3">
+      <section className="py-8 bg-gray-900">
+        <div className="container mx-auto px-6 grid gap-6 md:grid-cols-3">
           {features.map((f) => (
             <div key={f.title} className="text-center">
               <h3 className="text-2xl font-semibold mb-2">{f.title}</h3>
