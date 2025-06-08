@@ -1,4 +1,5 @@
 // pages/index.tsx
+import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 
@@ -39,12 +40,12 @@ export default function Home() {
       </Head>
 
       <main
-        className="min-h-screen bg-black text-white flex flex-col"
+        className="bg-black text-white font-sans"
         style={{ fontFamily: 'Poppins, sans-serif' }}
       >
         {/* Hero */}
         <section className="pt-32 pb-24 px-6 text-center">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
             Meet Your 24/7 AI Call Caddy
           </h1>
           <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-12">
@@ -54,12 +55,12 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link href="/how-it-works">
-              <a className="w-full sm:w-auto px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-full font-semibold transition">
+              <a className="w-full sm:w-auto px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-full font-semibold transition">
                 How It Works
               </a>
             </Link>
             <Link href="/pricing">
-              <a className="w-full sm:w-auto px-8 py-3 border border-white hover:bg-white hover:text-black rounded-full font-semibold transition">
+              <a className="w-full sm:w-auto px-8 py-4 border border-white hover:bg-white hover:text-black rounded-full font-semibold transition">
                 View Pricing
               </a>
             </Link>
@@ -85,28 +86,28 @@ export default function Home() {
           </div>
         </section>
 
-        {/* About */}
-        <section className="py-20 px-6">
-          <div className="container mx-auto max-w-3xl space-y-16">
-            <div className="text-center space-y-4">
-              <h2 className="text-3xl md:text-4xl font-bold">Who We Are</h2>
+        {/* About / What / How */}
+        <section className="py-20 px-6 bg-black">
+          <div className="container mx-auto max-w-3xl space-y-16 text-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Who We Are</h2>
               <p className="text-base md:text-lg text-gray-300 leading-relaxed">
-                We’re a team of AI pioneers and CX experts dedicated to
-                ensuring every call your business receives is handled
-                flawlessly—anytime, anywhere.
+                We’re a team of AI innovators and customer-experience experts
+                dedicated to ensuring every call your business receives is
+                handled flawlessly—anytime, anywhere.
               </p>
             </div>
-            <div className="text-center space-y-4">
-              <h2 className="text-3xl md:text-4xl font-bold">What We Do</h2>
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">What We Do</h2>
               <p className="text-base md:text-lg text-gray-300 leading-relaxed">
-                Our 24/7 AI receptionist takes calls, qualifies leads, and books
+                Our 24/7 AI receptionist answers calls, qualifies leads, and books
                 appointments directly into your calendar—boosting revenue and
-                slashing overhead.
+                cutting overhead.
               </p>
             </div>
-            <div className="text-center space-y-4">
-              <h2 className="text-3xl md:text-4xl font-bold">How It Works</h2>
-              <ol className="list-decimal list-inside text-base md:text-lg text-gray-300 space-y-3 leading-relaxed">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">How It Works</h2>
+              <ol className="list-decimal list-inside text-base md:text-lg text-gray-300 space-y-4 leading-relaxed text-left md:text-center">
                 <li>
                   <strong>Integrate:</strong> Connect your phone system and
                   calendar in under 5 minutes.
@@ -117,7 +118,7 @@ export default function Home() {
                 </li>
                 <li>
                   <strong>Go Live:</strong> Our AI answers, qualifies, and
-                  schedules—24/7.
+                  schedules calls—all day, every day.
                 </li>
               </ol>
             </div>
