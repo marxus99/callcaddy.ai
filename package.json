@@ -4,8 +4,10 @@
   "description": "CallCaddy.ai – Website &amp; API for 24/7 AI receptionist MVP",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/marxus99/callcaddy.ai.git"
