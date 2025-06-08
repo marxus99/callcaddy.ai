@@ -7,17 +7,19 @@ export default function Home() {
   const features = [
     {
       title: 'AI-Powered Calls',
-      desc: 'Human-like speech recognition that answers & routes your calls instantly.',
+      desc:
+        'Human-like speech recognition that answers and routes your calls instantly.',
     },
     {
       title: 'Instant Scheduling',
-      desc: 'Auto-book appointments into your calendar in real time—no dropped leads.',
+      desc:
+        'Auto-book appointments directly into your calendar—no more dropped leads.',
     },
     {
       title: 'Massive Cost Savings',
-      desc: 'Cut after-hours labor costs by up to 80% while boosting conversions.',
+      desc: 'Reduce after-hours labor costs by up to 80% while boosting conversions.',
     },
-  ]
+  ];
 
   return (
     <>
@@ -34,26 +36,26 @@ export default function Home() {
           crossOrigin="true"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
           rel="stylesheet"
         />
       </Head>
 
       <main
-        className="bg-black text-white font-sans"
-        style={{ fontFamily: 'Poppins, sans-serif' }}
+        className="bg-gray-950 text-gray-100 font-sans"
+        style={{ fontFamily: 'Inter, sans-serif' }}
       >
         {/* Hero */}
-        <section className="pt-32 pb-24 px-6 text-center">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+        <section className="min-h-screen flex flex-col justify-center items-center text-center px-6 py-24 space-y-8">
+          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight">
             Meet Your 24/7 AI Call Caddy
           </h1>
-          <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-12">
+          <p className="text-lg md:text-xl text-gray-300 max-w-2xl leading-relaxed">
             Never miss another call—our AI receptionist answers, qualifies, and
             books your appointments day or night, so you can focus on growing
             your business.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center pt-2">
             <Link href="/how-it-works">
               <a className="w-full sm:w-auto px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-full font-semibold transition">
                 How It Works
@@ -69,13 +71,13 @@ export default function Home() {
 
         {/* Features */}
         <section className="py-20 px-6 bg-gray-900">
-          <div className="container mx-auto grid gap-10 md:grid-cols-3">
+          <div className="container mx-auto grid gap-12 md:grid-cols-3">
             {features.map((f) => (
               <div
                 key={f.title}
-                className="bg-gray-800 p-10 rounded-lg flex flex-col h-full"
+                className="bg-gray-800 p-8 rounded-lg flex flex-col h-full space-y-4"
               >
-                <h3 className="text-2xl md:text-3xl font-semibold mb-4">
+                <h3 className="text-2xl md:text-3xl font-semibold">
                   {f.title}
                 </h3>
                 <p className="text-base md:text-lg text-gray-400 flex-grow leading-relaxed">
@@ -87,8 +89,8 @@ export default function Home() {
         </section>
 
         {/* About / What / How */}
-        <section className="py-20 px-6 bg-black">
-          <div className="container mx-auto max-w-3xl space-y-16 text-center">
+        <section className="py-24 px-6 bg-black">
+          <div className="container mx-auto max-w-3xl space-y-20 text-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Who We Are</h2>
               <p className="text-base md:text-lg text-gray-300 leading-relaxed">
@@ -126,8 +128,8 @@ export default function Home() {
         </section>
 
         {/* Final CTA */}
-        <section className="py-20 px-6 bg-gray-900">
-          <div className="container mx-auto text-center">
+        <section className="py-24 px-6 bg-gray-900">
+          <div className="container mx-auto text-center space-y-6">
             <h2 className="text-2xl md:text-3xl font-bold mb-6">
               Ready to elevate your front desk?
             </h2>
