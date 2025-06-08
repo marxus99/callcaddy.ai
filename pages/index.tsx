@@ -2,18 +2,9 @@ import Link from 'next/link';
 
 export default function Home() {
   const features = [
-    {
-      title: 'AI-Powered Calls',
-      desc: 'Human-like speech recognition & routing.',
-    },
-    {
-      title: 'Instant Scheduling',
-      desc: 'Auto-book into your calendar in real time.',
-    },
-    {
-      title: 'Cost Savings',
-      desc: 'Slash your after-hours labor costs by 80%.',
-    },
+    { title: 'AI-Powered Calls', desc: 'Human-like speech recognition & routing.' },
+    { title: 'Instant Scheduling', desc: 'Auto-book into your calendar in real time.' },
+    { title: 'Cost Savings', desc: 'Slash your after-hours labor costs by 80%.' },
   ];
 
   return (
@@ -23,8 +14,8 @@ export default function Home() {
         <div>
           <h1 className="text-6xl font-extrabold mb-4">Meet Your 24/7 AI Call Caddy</h1>
           <p className="text-lg mb-8 max-w-2xl mx-auto">
-            Never miss another call—our AI receptionist answers, qualifies, and books
-            your appointments, day or night.
+            Never miss another call—our AI receptionist answers, qualifies, and books your
+            appointments, day or night.
           </p>
           <div className="flex justify-center gap-4">
             <Link href="/how-it-works">
@@ -60,9 +51,7 @@ export default function Home() {
             <h2 className="text-4xl font-bold mb-4">Who We Are</h2>
             <p className="text-gray-300 max-w-3xl mx-auto">
               At CallCaddy.ai, we’re a team of AI and customer-experience experts on a
-              mission to revolutionize how small businesses handle calls. We blend
-              cutting-edge AI with real-world insights to make sure every customer
-              interaction is seamless and every lead is captured.
+              mission to revolutionize how small businesses handle calls.
             </p>
           </div>
 
@@ -70,9 +59,7 @@ export default function Home() {
             <h2 className="text-4xl font-bold mb-4">What We Do</h2>
             <p className="text-gray-300 max-w-3xl mx-auto">
               Our 24/7 AI receptionist answers calls, qualifies prospects, and books
-              appointments right into your calendar. By automating the front desk, you
-              reduce overhead, never miss a call, and boost revenue—all while maintaining
-              your brand’s unique voice.
+              appointments right into your calendar.
             </p>
           </div>
 
@@ -86,8 +73,8 @@ export default function Home() {
                 <strong>Customization:</strong> Tailor call flows and FAQs to match your brand voice.
               </li>
               <li>
-                <strong>Go Live:</strong> Our AI picks up calls, qualifies leads, and schedules them
-                instantly—day or night.
+                <strong>Go Live:</strong> Our AI picks up calls, qualifies leads, and schedules
+                them instantly—day or night.
               </li>
             </ol>
           </div>
