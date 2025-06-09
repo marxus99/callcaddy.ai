@@ -1,10 +1,10 @@
 import { useCallback } from 'react'
 import Particles from 'react-tsparticles'
-import type { Engine } from 'tsparticles-engine'
 import { loadFull } from 'tsparticles'
 
 export default function ParticlesBackground() {
-  const particlesInit = useCallback(async (engine: Engine) => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const particlesInit = useCallback(async (engine: any) => {
     await loadFull(engine)
   }, [])
 
@@ -27,6 +27,9 @@ export default function ParticlesBackground() {
           events: {
             onHover: { enable: true, mode: 'repulse' },
             resize: true
+          },
+          modes: {
+            repulse: { distance: 60, duration: 0.4 }
           }
         }
       }}
