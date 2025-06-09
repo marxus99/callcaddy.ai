@@ -63,7 +63,7 @@ export default function Home() {
 
       <main className="text-white font-sans">
         {/* Hero */}
-        <section className="pt-40 pb-20 px-6">
+        <section className="pt-40 pb-32 px-6">
           <div className="container mx-auto flex flex-col md:flex-row items-center gap-12">
             <div className="flex-1 text-center md:text-left">
               <h1 className="text-6xl md:text-7xl font-extrabold mb-6 leading-tight">
@@ -74,12 +74,12 @@ export default function Home() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                 <Link href="/contact">
-                  <a className="px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-full font-semibold transition shadow">
+                  <a className="px-8 py-4 bg-blue-600 hover:bg-blue-700 hover:shadow-lg rounded-full font-bold transition shadow">
                     Get Started — never miss a lead again!
                   </a>
                 </Link>
                 <Link href="/contact?demo=true">
-                  <a className="px-8 py-4 border border-white hover:bg-white hover:text-black rounded-full font-semibold transition">
+                  <a className="px-8 py-4 border border-white hover:bg-white hover:text-black hover:shadow-lg rounded-full font-semibold transition">
                     Book a Demo
                   </a>
                 </Link>
@@ -98,7 +98,7 @@ export default function Home() {
         </section>
 
         {/* Features */}
-        <section className="py-24 md:py-32 px-6 bg-gray-900">
+        <section className="py-28 md:py-36 px-6 bg-gray-900">
           <div className="container mx-auto grid gap-12 md:grid-cols-4">
             {features.map((f) => (
               <div
@@ -118,7 +118,7 @@ export default function Home() {
         </section>
 
         {/* How It Works */}
-        <section className="py-24 md:py-32 px-6 bg-black">
+        <section className="py-28 md:py-36 px-6 bg-black">
           <div className="container mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-12">How It Works</h2>
             <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
@@ -133,34 +133,34 @@ export default function Home() {
         </section>
 
         {/* Social Proof */}
-        <section className="py-24 md:py-32 px-6 bg-gray-900">
+        <section className="py-28 md:py-36 px-6 bg-gray-900">
           <div className="container mx-auto text-center space-y-8">
-            <h2 className="text-2xl md:text-3xl font-bold">Trusted by 1,000+ Businesses</h2>
+            <h2 className="text-2xl md:text-3xl font-bold">Feedback from Early Users</h2>
             <div className="flex flex-col md:flex-row justify-center gap-8 text-gray-300">
               <blockquote className="md:w-1/3 italic">
-                &quot;CallCaddy booked 40% more appointments in our first month!&quot;
-                <span className="not-italic text-white block mt-2">— Jane D., Plumbing Co.</span>
+                &quot;CallCaddy booked more jobs within days of switching.&quot;
+                <span className="not-italic text-white block mt-2">— Home Services Owner</span>
               </blockquote>
               <blockquote className="md:w-1/3 italic">
-                &quot;Our customers love the fast responses and we never miss a lead.&quot;
-                <span className="not-italic text-white block mt-2">— Mark T., HVAC Owner</span>
+                &quot;Our customers appreciate the quick responses, even after hours.&quot;
+                <span className="not-italic text-white block mt-2">— Small Business Founder</span>
               </blockquote>
               <blockquote className="md:w-1/3 italic">
-                &quot;Setup was a breeze and the AI sounds impressively human.&quot;
-                <span className="not-italic text-white block mt-2">— Lisa R., Cleaning Pros</span>
+                &quot;Setup was straightforward and the AI sounds impressively human.&quot;
+                <span className="not-italic text-white block mt-2">— Beta Tester</span>
               </blockquote>
             </div>
           </div>
         </section>
 
         {/* Final CTA */}
-        <section className="py-24 md:py-32 px-6 bg-gray-900">
+        <section className="py-28 md:py-36 px-6 bg-gray-900">
           <div className="container mx-auto text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-6">
               Ready to grow with CallCaddy?
             </h2>
             <Link href="/contact">
-              <a className="px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-full font-semibold transition shadow">
+              <a className="px-8 py-4 bg-blue-600 hover:bg-blue-700 hover:shadow-lg rounded-full font-bold transition shadow">
                 Start now — never miss a lead again!
               </a>
             </Link>
