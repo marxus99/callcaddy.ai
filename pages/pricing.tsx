@@ -50,7 +50,7 @@ export default function Pricing() {
               <li><strong>Overage:</strong> {plan.overage}</li>
               <li><strong>Feature:</strong> {plan.feature}</li>
             </ul>
-            <Link href="/contact">
+            <Link href={`/contact?plan=${encodeURIComponent(plan.name)}`}> 
               <a className="mt-auto block text-center px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
                 {plan.name === 'Enterprise' ? 'Contact Us' : `Choose ${plan.name}`}
               </a>
