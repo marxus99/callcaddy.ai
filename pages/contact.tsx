@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import { useState } from 'react';
+import { InlineWidget } from 'react-calendly';
 
 export default function Contact() {
   const router = useRouter();
@@ -77,12 +78,12 @@ export default function Contact() {
                 <option value="< 100">&lt; 100</option>
                 <option value="100-500">100–500</option>
                 <option value="500-1,000">500–1,000</option>
-                <option value="> 1,000">1,000+</option>
+                <option value="1000+">1,000+</option>
               </select>
             </label>
             <label className="flex flex-col">
               <span># of Locations or Technicians</span>
-              <input name="locations" className="p-2 rounded text-black" />
+              <input type="number" name="locations" className="p-2 rounded text-black" />
             </label>
           </div>
         </section>
@@ -111,7 +112,10 @@ export default function Contact() {
 
         <section className="space-y-4">
           <h2 className="text-2xl font-semibold">Kickoff Scheduling</h2>
-          <input type="date" name="kickoff" className="p-2 rounded text-black" />
+          <InlineWidget
+            url="https://calendly.com/callcaddy/onboarding"
+            styles={{ height: "630px" }}
+          />
         </section>
 
         <section className="space-y-4">
