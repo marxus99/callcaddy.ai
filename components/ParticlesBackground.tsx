@@ -12,11 +12,11 @@ export default function ParticlesBackground() {
     <Particles
       id="bg"
       init={particlesInit}
+      className="animated-gradient-background"
       style={{
         position: 'fixed',
         inset: 0,
         zIndex: -1,
-        background: 'radial-gradient(circle, #000, #1a1a1a)',
         pointerEvents: 'none'
       }}
       options={{
