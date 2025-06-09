@@ -37,9 +37,9 @@ export default function Pricing() {
   ];
 
   return (
-    <main className="min-h-screen bg-black text-white py-16">
+    <main className="min-h-screen bg-black text-white py-20 md:py-24">
       <h1 className="text-4xl font-extrabold text-center mb-12">Pricing Plans</h1>
-      <div className="container mx-auto grid gap-8 md:grid-cols-4 px-4">
+      <div className="container mx-auto grid gap-12 md:grid-cols-2 lg:grid-cols-4 px-4">
         {plans.map((plan) => (
           <div key={plan.name} className="bg-gray-900 p-6 rounded-lg shadow-lg flex flex-col">
             <h2 className="text-2xl font-semibold mb-2">{plan.name}</h2>
