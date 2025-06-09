@@ -96,20 +96,11 @@ export default function Home() {
             </div>
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">How It Works</h2>
-              <ol className="list-decimal list-inside text-base md:text-lg text-gray-300 space-y-4 leading-relaxed text-left md:text-center">
-                <li>
-                  <strong>Integrate:</strong> Connect your phone system and
-                  calendar in under 5 minutes.
-                </li>
-                <li>
-                  <strong>Customize:</strong> Tailor call flows and FAQs to
-                  match your brand voice.
-                </li>
-                <li>
-                  <strong>Go Live:</strong> Our AI answers, qualifies, and
-                  schedules calls—all day, every day.
-                </li>
-              </ol>
+              <img
+                src="https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=800&q=80"
+                alt="AI receptionist assisting a caller"
+                className="w-full rounded-lg shadow-lg mx-auto"
+              />
             </div>
           </div>
         </section>
