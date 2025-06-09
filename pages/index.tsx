@@ -1,12 +1,14 @@
 // pages/index.tsx
 import React from 'react'
 import Head from 'next/head'
+import Image from 'next/image'
 import Link from 'next/link'
 import {
   PhoneArrowUpRightIcon,
   CalendarDaysIcon,
   CurrencyDollarIcon,
   ChatBubbleOvalLeftEllipsisIcon,
+  UserPlusIcon,
 } from '@heroicons/react/24/outline'
 
 
@@ -15,12 +17,12 @@ export default function Home() {
     {
       icon: PhoneArrowUpRightIcon,
       title: 'AI Reception',
-      desc: 'Instantly pick up every call with a friendly, human-like voice.',
+      desc: 'Instantly greet every caller with a friendly, human-like voice.',
     },
     {
       icon: CalendarDaysIcon,
-      title: 'Instant Scheduling',
-      desc: 'Book jobs automatically and fill your calendar 24/7.',
+      title: '24/7 Scheduling',
+      desc: 'Book jobs automatically and fill your calendar around the clock.',
     },
     {
       icon: CurrencyDollarIcon,
@@ -35,9 +37,18 @@ export default function Home() {
   ]
 
   const steps = [
-    'Connect your existing phone number and calendar',
-    'Customize responses to match your brand',
-    'Sit back while the AI books jobs and qualifies leads',
+    {
+      icon: UserPlusIcon,
+      text: 'Sign up and tell us about your business',
+    },
+    {
+      icon: PhoneArrowUpRightIcon,
+      text: 'Forward your calls or chat messages',
+    },
+    {
+      icon: CalendarDaysIcon,
+      text: 'Relax while CallCaddy books jobs for you',
+    },
   ]
 
   return (
@@ -52,25 +63,37 @@ export default function Home() {
 
       <main className="text-white font-sans">
         {/* Hero */}
-        <section className="pt-36 pb-20 px-6 text-center">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-            Turn Every Caller Into A Customer
-          </h1>
-          <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            CallCaddy answers 24/7 with natural AI, books appointments instantly
-            and captures leads while you focus on the job.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact">
-              <a className="w-full sm:w-auto px-8 py-4 mb-2 sm:mb-0 bg-blue-600 hover:bg-blue-700 rounded-full font-semibold transition">
-                Get Started Free
-              </a>
-            </Link>
-            <Link href="/contact">
-              <a className="w-full sm:w-auto px-8 py-4 border border-white hover:bg-white hover:text-black rounded-full font-semibold transition">
-                Book a Demo
-              </a>
-            </Link>
+        <section className="pt-40 pb-20 px-6">
+          <div className="container mx-auto flex flex-col md:flex-row items-center gap-12">
+            <div className="flex-1 text-center md:text-left">
+              <h1 className="text-6xl md:text-7xl font-extrabold mb-6 leading-tight">
+                Never Miss Another Call
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-xl">
+                CallCaddy&apos;s AI receptionist answers instantly, schedules jobs and follows up so you can focus on running your business.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                <Link href="/contact">
+                  <a className="px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-full font-semibold transition shadow">
+                    Get Started — never miss a lead again!
+                  </a>
+                </Link>
+                <Link href="/contact?demo=true">
+                  <a className="px-8 py-4 border border-white hover:bg-white hover:text-black rounded-full font-semibold transition">
+                    Book a Demo
+                  </a>
+                </Link>
+              </div>
+            </div>
+            <div className="flex-1 flex justify-center mt-10 md:mt-0">
+              <Image
+                src="/hero.svg"
+                alt="AI receptionist illustration"
+                width={256}
+                height={256}
+                className="w-64 md:w-80 animate-float"
+              />
+            </div>
           </div>
         </section>
 
@@ -96,23 +119,37 @@ export default function Home() {
 
         {/* How It Works */}
         <section className="py-24 md:py-32 px-6 bg-black">
-          <div className="container mx-auto max-w-3xl">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">How It Works</h2>
-            <ol className="space-y-4 text-gray-300 list-decimal list-inside">
+          <div className="container mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-12">How It Works</h2>
+            <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               {steps.map((step) => (
-                <li key={step}>{step}</li>
+                <div key={step.text} className="p-6 bg-gray-900 rounded-lg flex flex-col items-center">
+                  <step.icon className="w-12 h-12 text-blue-500 mb-4" />
+                  <p className="text-lg text-gray-300">{step.text}</p>
+                </div>
               ))}
-            </ol>
+            </div>
           </div>
         </section>
 
         {/* Social Proof */}
         <section className="py-24 md:py-32 px-6 bg-gray-900">
-          <div className="container mx-auto max-w-3xl text-center space-y-6">
-            <h2 className="text-2xl md:text-3xl font-bold">Trusted by Service Pros</h2>
-            <p className="text-gray-300 italic">
-              &quot;CallCaddy booked 40% more appointments in our first month!&quot; – Jane D., Plumbing Co.
-            </p>
+          <div className="container mx-auto text-center space-y-8">
+            <h2 className="text-2xl md:text-3xl font-bold">Trusted by 1,000+ Businesses</h2>
+            <div className="flex flex-col md:flex-row justify-center gap-8 text-gray-300">
+              <blockquote className="md:w-1/3 italic">
+                &quot;CallCaddy booked 40% more appointments in our first month!&quot;
+                <span className="not-italic text-white block mt-2">— Jane D., Plumbing Co.</span>
+              </blockquote>
+              <blockquote className="md:w-1/3 italic">
+                &quot;Our customers love the fast responses and we never miss a lead.&quot;
+                <span className="not-italic text-white block mt-2">— Mark T., HVAC Owner</span>
+              </blockquote>
+              <blockquote className="md:w-1/3 italic">
+                &quot;Setup was a breeze and the AI sounds impressively human.&quot;
+                <span className="not-italic text-white block mt-2">— Lisa R., Cleaning Pros</span>
+              </blockquote>
+            </div>
           </div>
         </section>
 
@@ -123,8 +160,8 @@ export default function Home() {
               Ready to grow with CallCaddy?
             </h2>
             <Link href="/contact">
-              <a className="px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-full font-semibold transition">
-                Get Started Free
+              <a className="px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-full font-semibold transition shadow">
+                Start now — never miss a lead again!
               </a>
             </Link>
           </div>
