@@ -33,28 +33,15 @@ export default function Contact() {
           <div className="flex flex-col space-y-2">
             <label className="flex flex-col">
               <span>Full Name *</span>
-              <input
-                required
-                name="fullName"
-                className="p-2 rounded bg-gray-200 text-black"
-              />
+              <input required name="fullName" className="p-2 rounded text-black" />
             </label>
             <label className="flex flex-col">
               <span>Business Email *</span>
-              <input
-                required
-                type="email"
-                name="email"
-                className="p-2 rounded bg-gray-200 text-black"
-              />
+              <input required type="email" name="email" className="p-2 rounded text-black" />
             </label>
             <label className="flex flex-col">
               <span>Phone Number *</span>
-              <input
-                required
-                name="phone"
-                className="p-2 rounded bg-gray-200 text-black"
-              />
+              <input required name="phone" className="p-2 rounded text-black" />
             </label>
           </div>
         </section>
@@ -64,23 +51,15 @@ export default function Contact() {
           <div className="flex flex-col space-y-2">
             <label className="flex flex-col">
               <span>Company Name *</span>
-              <input
-                required
-                name="company"
-                className="p-2 rounded bg-gray-200 text-black"
-              />
+              <input required name="company" className="p-2 rounded text-black" />
             </label>
             <label className="flex flex-col">
               <span>Website URL</span>
-              <input
-                type="url"
-                name="website"
-                className="p-2 rounded bg-gray-200 text-black"
-              />
+              <input type="url" name="website" className="p-2 rounded text-black" />
             </label>
             <label className="flex flex-col">
               <span>Industry</span>
-              <select name="industry" className="p-2 rounded bg-gray-200 text-black">
+              <select name="industry" className="p-2 rounded text-black">
                 <option value="Residential Plumbing">Residential Plumbing</option>
                 <option value="Commercial HVAC">Commercial HVAC</option>
                 <option value="Other">Other</option>
@@ -94,7 +73,7 @@ export default function Contact() {
           <div className="flex flex-col space-y-2">
             <label className="flex flex-col">
               <span>Approx. Monthly Call Volume</span>
-              <select name="volume" className="p-2 rounded bg-gray-200 text-black">
+              <select name="volume" className="p-2 rounded text-black">
                 <option value="< 100">&lt; 100</option>
                 <option value="100-500">100–500</option>
                 <option value="500-1,000">500–1,000</option>
@@ -103,7 +82,7 @@ export default function Contact() {
             </label>
             <label className="flex flex-col">
               <span># of Locations or Technicians</span>
-              <input name="locations" className="p-2 rounded bg-gray-200 text-black" />
+              <input name="locations" className="p-2 rounded text-black" />
             </label>
           </div>
         </section>
@@ -125,27 +104,19 @@ export default function Contact() {
             </div>
             <label className="flex flex-col">
               <span>CRM or Helpdesk</span>
-              <input
-                name="crm"
-                className="p-2 rounded bg-gray-200 text-black"
-                placeholder="HubSpot, Salesforce, etc."
-              />
+              <input name="crm" className="p-2 rounded text-black" placeholder="HubSpot, Salesforce, etc." />
             </label>
           </div>
         </section>
 
         <section className="space-y-4">
           <h2 className="text-2xl font-semibold">Kickoff Scheduling</h2>
-          <input type="date" name="kickoff" className="p-2 rounded bg-gray-200 text-black" />
+          <input type="date" name="kickoff" className="p-2 rounded text-black" />
         </section>
 
         <section className="space-y-4">
           <h2 className="text-2xl font-semibold">Additional Requirements or Questions</h2>
-          <textarea
-            name="notes"
-            className="p-2 w-full rounded bg-gray-200 text-black"
-            rows={4}
-          ></textarea>
+          <textarea name="notes" className="p-2 w-full rounded text-black" rows={4}></textarea>
         </section>
 
         <section className="flex items-center space-x-2">
