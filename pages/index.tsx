@@ -98,8 +98,8 @@ export default function Home() {
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">How It Works</h2>
               <img
-                src="https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=800&q=80"
-                alt="AI receptionist assisting a caller"
+                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
+                alt="Stylized AI receptionist answering a call"
                 className="w-full rounded-lg shadow-lg mx-auto"
               />
             </div>
