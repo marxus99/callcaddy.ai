@@ -12,9 +12,15 @@ export default function ParticlesBackground() {
     <Particles
       id="bg"
       init={particlesInit}
-      style={{ background: 'radial-gradient(circle, #000, #1a1a1a)', pointerEvents: 'none' }}
+      style={{
+        position: 'fixed',
+        inset: 0,
+        zIndex: -1,
+        background: 'radial-gradient(circle, #000, #1a1a1a)',
+        pointerEvents: 'none'
+      }}
       options={{
-        fullScreen: { enable: true, zIndex: -1 },
+        fullScreen: { enable: false },
         particles: {
           number: { value: 80, density: { enable: true, area: 800 } },
           color: { value: '#ffffff' },
