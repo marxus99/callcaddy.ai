@@ -80,11 +80,11 @@ export default function Contact() {
             </label>
             <label className="flex flex-col">
               <span>Industry</span>
-              <select name="industry" className="p-2 rounded bg-gray-200 text-black">
-                <option value="Residential Plumbing">Residential Plumbing</option>
-                <option value="Commercial HVAC">Commercial HVAC</option>
-                <option value="Other">Other</option>
-              </select>
+              <input
+                name="industry"
+                className="p-2 rounded bg-gray-200 text-black"
+                placeholder="Your industry"
+              />
             </label>
           </div>
         </section>
