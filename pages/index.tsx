@@ -97,8 +97,8 @@ export default function Home() {
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">How It Works</h2>
               <img
-                src="https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=800&q=80"
-                alt="AI receptionist assisting a caller"
+                src="https://images.unsplash.com/photo-1605902711622-cfb43c44367f?auto=format&fit=crop&w=800&q=80"
+                alt="Robot receptionist handling calls"
                 className="w-full rounded-lg shadow-lg mx-auto"
               />
             </div>
@@ -106,7 +106,7 @@ export default function Home() {
         </section>
 
         {/* Final CTA */}
-        <section className="py-24 md:py-32 px-6 bg-gray-900">
+        <section className="py-24 md:py-32 px-6 bg-gray-900 mt-12">
           <div className="container mx-auto text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-6">
               Ready to elevate your front desk?
