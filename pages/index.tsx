@@ -45,7 +45,7 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link href="/how-it-works">
-              <a className="w-full sm:w-auto px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-full font-semibold transition">
+              <a className="w-full sm:w-auto px-8 py-4 mb-4 sm:mb-0 bg-blue-600 hover:bg-blue-700 rounded-full font-semibold transition">
                 How It Works
               </a>
             </Link>
