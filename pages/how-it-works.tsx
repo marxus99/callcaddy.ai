@@ -2,8 +2,8 @@ import Link from 'next/link';
 
 export default function HowItWorks() {
   return (
-    <main className="min-h-screen bg-gray-50 py-16">
-      <div className="container mx-auto space-y-12">
+    <main className="min-h-screen bg-gray-50 py-20 md:py-24">
+      <div className="container mx-auto space-y-16 px-4">
         <h1 className="text-4xl font-extrabold text-center">How It Works</h1>
         <ol className="space-y-8 list-decimal list-inside text-lg text-gray-700">
           <li>

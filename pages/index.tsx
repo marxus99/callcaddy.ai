@@ -27,24 +27,13 @@ export default function Home() {
           name="description"
           content="Never miss a call—our AI receptionist answers, qualifies, and books your appointments, day or night."
         />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="true"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
-          rel="stylesheet"
-        />
       </Head>
 
       <main
         className="bg-black text-white font-sans"
-        style={{ fontFamily: 'Poppins, sans-serif' }}
       >
         {/* Hero */}
-        <section className="pt-32 pb-24 px-6 text-center">
+        <section className="pt-36 pb-28 px-6 text-center">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
             Meet Your 24/7 AI Call Caddy
           </h1>
@@ -68,8 +57,8 @@ export default function Home() {
         </section>
 
         {/* Features */}
-        <section className="py-20 px-6 bg-gray-900">
-          <div className="container mx-auto grid gap-10 md:grid-cols-3">
+        <section className="py-24 md:py-32 px-6 bg-gray-900">
+          <div className="container mx-auto grid gap-12 md:grid-cols-3">
             {features.map((f) => (
               <div
                 key={f.title}
@@ -87,7 +76,7 @@ export default function Home() {
         </section>
 
         {/* About / What / How */}
-        <section className="py-20 px-6 bg-black">
+        <section className="py-24 md:py-32 px-6 bg-black">
           <div className="container mx-auto max-w-3xl space-y-16 text-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Who We Are</h2>
@@ -126,7 +115,7 @@ export default function Home() {
         </section>
 
         {/* Final CTA */}
-        <section className="py-20 px-6 bg-gray-900">
+        <section className="py-24 md:py-32 px-6 bg-gray-900">
           <div className="container mx-auto text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-6">
               Ready to elevate your front desk?
