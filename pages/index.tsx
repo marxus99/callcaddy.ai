@@ -9,6 +9,9 @@ import {
   CurrencyDollarIcon,
   ChatBubbleOvalLeftEllipsisIcon,
   UserPlusIcon,
+  SparklesIcon,
+  ShieldCheckIcon,
+  RocketLaunchIcon,
 } from '@heroicons/react/24/outline'
 
 
@@ -48,6 +51,24 @@ export default function Home() {
     {
       icon: CalendarDaysIcon,
       text: 'Relax while CallCaddy books jobs for you',
+    },
+  ]
+
+  const highlights = [
+    {
+      icon: RocketLaunchIcon,
+      title: 'Fast Setup',
+      desc: 'Get started quickly with streamlined onboarding.',
+    },
+    {
+      icon: ShieldCheckIcon,
+      title: 'Reliable Service',
+      desc: 'We answer every call so you never miss an opportunity.',
+    },
+    {
+      icon: SparklesIcon,
+      title: 'Always Improving',
+      desc: 'We continually refine our AI to better serve you.',
     },
   ]
 
@@ -132,23 +153,18 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Social Proof */}
+        {/* Why Choose CallCaddy */}
         <section className="py-24 md:py-32 px-6 bg-gray-900">
           <div className="container mx-auto text-center space-y-8">
-            <h2 className="text-2xl md:text-3xl font-bold">Trusted by 1,000+ Businesses</h2>
-            <div className="flex flex-col md:flex-row justify-center gap-8 text-gray-300">
-              <blockquote className="md:w-1/3 italic">
-                &quot;CallCaddy booked 40% more appointments in our first month!&quot;
-                <span className="not-italic text-white block mt-2">— Jane D., Plumbing Co.</span>
-              </blockquote>
-              <blockquote className="md:w-1/3 italic">
-                &quot;Our customers love the fast responses and we never miss a lead.&quot;
-                <span className="not-italic text-white block mt-2">— Mark T., HVAC Owner</span>
-              </blockquote>
-              <blockquote className="md:w-1/3 italic">
-                &quot;Setup was a breeze and the AI sounds impressively human.&quot;
-                <span className="not-italic text-white block mt-2">— Lisa R., Cleaning Pros</span>
-              </blockquote>
+            <h2 className="text-2xl md:text-3xl font-bold">Why Choose CallCaddy?</h2>
+            <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              {highlights.map((h) => (
+                <div key={h.title} className="p-6 bg-gray-800 rounded-lg flex flex-col items-center text-gray-300">
+                  <h.icon className="w-12 h-12 text-blue-500 mb-4" />
+                  <h3 className="text-xl font-semibold text-white mb-2">{h.title}</h3>
+                  <p className="leading-relaxed">{h.desc}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
