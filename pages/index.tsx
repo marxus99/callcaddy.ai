@@ -30,9 +30,7 @@ export default function Home() {
         />
       </Head>
 
-      <main
-        className="bg-black text-white font-sans"
-      >
+      <main className="text-white font-sans">
         {/* Hero */}
         <section className="pt-36 pb-28 px-6 text-center">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
