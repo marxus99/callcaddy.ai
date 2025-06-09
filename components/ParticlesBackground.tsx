@@ -1,10 +1,10 @@
 import { useCallback } from 'react'
 import Particles from 'react-tsparticles'
-import type { Engine } from 'tsparticles-engine'
 import { loadFull } from 'tsparticles'
 
 export default function ParticlesBackground() {
-  const particlesInit = useCallback(async (engine: Engine) => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const particlesInit = useCallback(async (engine: any) => {
     await loadFull(engine)
   }, [])
 
@@ -12,9 +12,15 @@ export default function ParticlesBackground() {
     <Particles
       id="bg"
       init={particlesInit}
-      style={{ background: 'radial-gradient(circle, #000, #1a1a1a)', pointerEvents: 'none' }}
+      style={{
+        position: 'fixed',
+        inset: 0,
+        zIndex: -1,
+        background: 'radial-gradient(circle, #000, #1a1a1a)',
+        pointerEvents: 'none'
+      }}
       options={{
-        fullScreen: { enable: true, zIndex: -1 },
+        fullScreen: { enable: false },
         particles: {
           number: { value: 80, density: { enable: true, area: 800 } },
           color: { value: '#ffffff' },
@@ -27,6 +33,9 @@ export default function ParticlesBackground() {
           events: {
             onHover: { enable: true, mode: 'repulse' },
             resize: true
+          },
+          modes: {
+            repulse: { distance: 60, duration: 0.4 }
           }
         }
       }}
