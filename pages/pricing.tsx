@@ -37,7 +37,7 @@ export default function Pricing() {
   ];
 
   return (
-    <main className="min-h-screen bg-black text-white py-20 md:py-24">
+    <main className="min-h-screen bg-black text-white py-24 md:py-32">
       <h1 className="text-4xl font-extrabold text-center mb-12">Pricing Plans</h1>
       <div className="container mx-auto grid gap-12 md:grid-cols-2 lg:grid-cols-4 px-4">
         {plans.map((plan) => (
@@ -51,7 +51,7 @@ export default function Pricing() {
               <li><strong>Feature:</strong> {plan.feature}</li>
             </ul>
             <Link href={`/contact?plan=${encodeURIComponent(plan.name)}`}> 
-              <a className="mt-auto block text-center px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+              <a className="mt-auto block text-center px-4 py-3 bg-blue-600 text-white rounded hover:bg-blue-700 hover:shadow-lg font-bold">
                 {plan.name === 'Enterprise' ? 'Contact Us' : `Choose ${plan.name}`}
               </a>
             </Link>

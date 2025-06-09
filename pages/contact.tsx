@@ -23,7 +23,7 @@ export default function Contact() {
   }
 
   return (
-    <main className="min-h-screen bg-black text-white py-10">
+    <main className="min-h-screen bg-black text-white py-16">
       <h1 className="text-4xl font-extrabold text-center mb-8">Get Started</h1>
       <form onSubmit={handleSubmit} className="max-w-2xl mx-auto space-y-6 px-4">
         <input type="hidden" name="package" value={typeof plan === 'string' ? plan : ''} />
@@ -157,7 +157,7 @@ export default function Contact() {
         <p className="text-sm">
           <a href="/terms" className="underline" target="_blank" rel="noopener noreferrer">Terms &amp; Privacy</a>
         </p>
-        <button type="submit" className="px-6 py-3 bg-blue-600 rounded text-white hover:bg-blue-700">Get Started</button>
+        <button type="submit" className="px-6 py-4 bg-blue-600 rounded text-white font-bold hover:bg-blue-700 hover:shadow-lg">Get Started</button>
       </form>
     </main>
   );

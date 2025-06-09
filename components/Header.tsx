@@ -7,19 +7,19 @@ export default function Header() {
         <Link href="/">
           <a className="text-xl font-bold">CallCaddy</a>
         </Link>
-        <nav className="hidden md:flex items-center space-x-6 text-sm">
-          <Link href="/how-it-works"><a className="hover:text-blue-400">How It Works</a></Link>
-          <Link href="/pricing"><a className="hover:text-blue-400">Pricing</a></Link>
-          <Link href="/contact"><a className="hover:text-blue-400">Contact</a></Link>
+        <nav className="hidden md:flex items-center space-x-6 text-base">
+          <Link href="/how-it-works"><a className="hover:text-blue-400 hover:underline py-2 inline-block">How It Works</a></Link>
+          <Link href="/pricing"><a className="hover:text-blue-400 hover:underline py-2 inline-block">Pricing</a></Link>
+          <Link href="/contact"><a className="hover:text-blue-400 hover:underline py-2 inline-block">Contact</a></Link>
         </nav>
         <div className="flex items-center space-x-2">
           <Link href="/contact">
-            <a className="hidden sm:inline-block px-4 py-2 bg-blue-600 rounded-full hover:bg-blue-700 transition text-sm font-semibold shadow">
+            <a className="hidden sm:inline-block px-4 py-3 bg-blue-600 rounded-full hover:bg-blue-700 hover:shadow-lg transition text-sm font-bold shadow">
               Get Started
             </a>
           </Link>
           <Link href="/contact?demo=true">
-            <a className="text-sm font-semibold px-4 py-2 border border-blue-500 rounded-full hover:bg-blue-500 hover:text-black transition">
+            <a className="text-sm font-semibold px-4 py-3 border border-blue-500 rounded-full hover:bg-blue-500 hover:text-black hover:shadow-lg transition">
               Book a Demo
             </a>
           </Link>
