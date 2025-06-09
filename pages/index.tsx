@@ -42,14 +42,14 @@ export default function Home() {
             books your appointments day or night, so you can focus on growing
             your business.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <div className="flex flex-col justify-center space-y-4 sm:flex-row sm:space-y-0 sm:space-x-6">
             <Link href="/how-it-works">
-              <a className="w-full sm:w-auto px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-full font-semibold transition">
+              <a className="block w-full sm:w-auto px-8 py-4 text-center bg-blue-600 hover:bg-blue-700 rounded-full font-semibold transition">
                 How It Works
               </a>
             </Link>
             <Link href="/pricing">
-              <a className="w-full sm:w-auto px-8 py-4 border border-white hover:bg-white hover:text-black rounded-full font-semibold transition">
+              <a className="block w-full sm:w-auto px-8 py-4 text-center border border-white hover:bg-white hover:text-black rounded-full font-semibold transition">
                 View Pricing
               </a>
             </Link>
@@ -96,26 +96,17 @@ export default function Home() {
             </div>
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">How It Works</h2>
-              <ol className="list-decimal list-inside text-base md:text-lg text-gray-300 space-y-4 leading-relaxed text-left md:text-center">
-                <li>
-                  <strong>Integrate:</strong> Connect your phone system and
-                  calendar in under 5 minutes.
-                </li>
-                <li>
-                  <strong>Customize:</strong> Tailor call flows and FAQs to
-                  match your brand voice.
-                </li>
-                <li>
-                  <strong>Go Live:</strong> Our AI answers, qualifies, and
-                  schedules calls—all day, every day.
-                </li>
-              </ol>
+              <img
+                src="https://images.unsplash.com/photo-1605902711622-cfb43c44367f?auto=format&fit=crop&w=800&q=80"
+                alt="Robot receptionist handling calls"
+                className="w-full rounded-lg shadow-lg mx-auto"
+              />
             </div>
           </div>
         </section>
 
         {/* Final CTA */}
-        <section className="py-24 md:py-32 px-6 bg-gray-900">
+        <section className="py-24 md:py-32 px-6 bg-gray-900 mt-12">
           <div className="container mx-auto text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-6">
               Ready to elevate your front desk?
