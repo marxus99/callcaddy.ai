@@ -38,19 +38,19 @@ export default function HowItWorks() {
 
   return (
     <main className="bg-black text-white font-sans">
-      <section className="pt-36 pb-10 px-6 text-center">
+      <section className="pt-36 pb-10 px-6 md:px-8 text-center animate-fadeIn">
         <h1 className="text-5xl md:text-6xl font-bold mb-6">How It Works</h1>
-        <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
+        <p className="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto">
           CallCaddy automatically answers your calls, schedules appointments and follows up with leads so you never miss a chance to grow your business.
         </p>
       </section>
 
-      <section className="py-12 md:py-16 px-6 bg-gray-900">
+      <section className="py-12 md:py-16 px-6 md:px-8 bg-gray-900 animate-fadeIn">
         <div className="container mx-auto max-w-3xl space-y-12">
           {steps.map((step, idx) => (
-            <div key={step.title} className="flex gap-6">
+            <div key={step.title} className="flex gap-6 transition hover:shadow-lg">
               <div className="text-3xl font-semibold shrink-0">{idx + 1}.</div>
-              <p className="text-base md:text-lg text-gray-300 leading-relaxed">
+              <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
                 <strong className="block text-white text-2xl mb-1">{step.title}</strong>
                 {step.desc}
               </p>
@@ -59,10 +59,10 @@ export default function HowItWorks() {
         </div>
       </section>
 
-      <section className="py-12 px-6 bg-black">
+      <section className="py-12 px-6 md:px-8 bg-black animate-fadeIn">
         <div className="container mx-auto max-w-3xl">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">Key Benefits</h2>
-          <ul className="space-y-2 text-gray-300 list-disc list-inside">
+          <ul className="space-y-2 text-gray-300 list-disc list-inside text-lg md:text-xl">
             {benefits.map((b) => (
               <li key={b}>{b}</li>
             ))}
@@ -70,10 +70,10 @@ export default function HowItWorks() {
         </div>
       </section>
 
-      <section className="py-12 md:py-16 px-6 bg-gray-900">
+      <section className="py-12 md:py-16 px-6 md:px-8 bg-gray-900 animate-fadeIn">
         <div className="container mx-auto max-w-3xl">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">Why Choose CallCaddy?</h2>
-          <ul className="space-y-2 text-gray-300 list-disc list-inside">
+          <ul className="space-y-2 text-gray-300 list-disc list-inside text-lg md:text-xl">
             {reasons.map((r) => (
               <li key={r}>{r}</li>
             ))}
@@ -81,12 +81,10 @@ export default function HowItWorks() {
         </div>
       </section>
 
-      <section className="py-20 md:py-24 px-6 bg-black text-center">
+      <section className="py-20 md:py-24 px-6 md:px-8 bg-black text-center animate-fadeIn">
         <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to see it in action?</h2>
-        <Link href="/pricing">
-          <a className="px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-full font-semibold transition">
-            Get Started
-          </a>
+        <Link href="/pricing" className="px-8 py-5 bg-blue-600 hover:bg-blue-700 rounded-full font-semibold transition-transform transform hover:scale-105">
+          Get Started
         </Link>
       </section>
     </main>
