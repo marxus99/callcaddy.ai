@@ -6,7 +6,7 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
   return (
     <header className="fixed top-0 inset-x-0 z-20 backdrop-blur bg-black/60 text-white">
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 py-4">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         <Link href="/">
           <a className="text-xl font-bold">CallCaddy</a>
         </Link>

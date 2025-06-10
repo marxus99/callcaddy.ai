@@ -84,10 +84,10 @@ export default function Home() {
 
       <main className="text-white font-sans">
         {/* Hero */}
-        <section className="pt-40 pb-20 px-6">
+        <section className="pt-36 pb-16 px-6">
           <div className="container mx-auto flex flex-col md:flex-row items-center gap-12">
             <div className="flex-1 text-center md:text-left">
-              <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold mb-6 leading-tight">
+              <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold mb-6 leading-tight">
                 Never Miss Another Call
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-xl">
@@ -120,7 +120,7 @@ export default function Home() {
 
         {/* Features */}
         <section className="py-24 md:py-32 px-6 bg-gray-900">
-          <div className="container mx-auto grid gap-12 sm:grid-cols-2 md:grid-cols-4">
+          <div className="container mx-auto grid gap-12 grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
             {features.map((f) => (
               <div
                 key={f.title}
@@ -142,7 +142,7 @@ export default function Home() {
         <section className="py-24 md:py-32 px-6 bg-black">
           <div className="container mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-12">How It Works</h2>
-            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               {steps.map((step) => (
                 <div key={step.text} className="p-6 bg-gray-900 rounded-lg flex flex-col items-center">
                   <step.icon className="w-12 h-12 text-blue-500 mb-4" />
@@ -157,7 +157,7 @@ export default function Home() {
         <section className="py-24 md:py-32 px-6 bg-gray-900">
           <div className="container mx-auto text-center space-y-8">
             <h2 className="text-2xl md:text-3xl font-bold">Why Choose CallCaddy?</h2>
-            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               {highlights.map((h) => (
                 <div key={h.title} className="p-6 bg-gray-800 rounded-lg flex flex-col items-center text-gray-300">
                   <h.icon className="w-12 h-12 text-blue-500 mb-4" />
@@ -176,7 +176,7 @@ export default function Home() {
               Ready to grow with CallCaddy?
             </h2>
             <Link href="/contact">
-              <a className="px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-full font-semibold transition shadow">
+              <a className="w-full sm:w-auto px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-full font-semibold transition shadow">
                 Start now — never miss a lead again!
               </a>
             </Link>
