@@ -157,7 +157,7 @@ export default function Contact() {
         <p className="text-sm">
           <a href="/terms" className="underline" target="_blank" rel="noopener noreferrer">Terms &amp; Privacy</a>
         </p>
-        <button type="submit" className="px-6 py-3 bg-blue-600 rounded text-white hover:bg-blue-700">Get Started</button>
+        <button type="submit" className="w-full px-6 py-3 bg-blue-600 rounded text-white hover:bg-blue-700">Get Started</button>
       </form>
     </main>
   );
