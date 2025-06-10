@@ -13,6 +13,7 @@ import {
   ShieldCheckIcon,
   RocketLaunchIcon,
 } from '@heroicons/react/24/outline'
+import HeroParticles from '@/components/HeroParticles'
 
 
 export default function Home() {
@@ -84,7 +85,8 @@ export default function Home() {
 
       <main className="text-white font-sans">
         {/* Hero */}
-        <section className="pt-40 pb-20 px-6 md:px-8 animate-fadeIn">
+        <section className="relative isolate overflow-hidden bg-[#0f172a] pt-40 pb-20 px-6 md:px-8 animate-fadeIn">
+          <HeroParticles />
           <div className="container mx-auto flex flex-col md:flex-row items-center gap-12">
             <div className="flex-1 text-center">
               <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold mb-6 leading-tight">
