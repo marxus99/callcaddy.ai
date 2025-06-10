@@ -88,13 +88,13 @@ export default function Pricing() {
     <main className="min-h-screen bg-black text-white py-20 md:py-24">
       <h1 className="text-4xl font-extrabold text-center mb-4">Pricing Plans</h1>
       <p className="text-center text-gray-300 mb-12">Simple pricing, no hidden fees. Cancel anytime.</p>
-      <div className="container mx-auto grid gap-8 sm:grid-cols-2 lg:grid-cols-4 px-4">
+      <div className="container mx-auto grid gap-8 sm:grid-cols-2 lg:grid-cols-4 px-4 md:px-8 animate-fadeIn">
         {plans.map((plan) => {
           const Icon = plan.icon
           return (
             <div
               key={plan.name}
-              className={`relative bg-gray-900 p-6 rounded-lg shadow-xl flex flex-col transition transform hover:scale-105 hover:shadow-2xl ${plan.badge ? 'ring-2 ring-blue-600' : ''}`}
+              className={`relative bg-gray-900 p-6 rounded-lg shadow-xl flex flex-col transition-transform transform hover:scale-105 hover:shadow-2xl ${plan.badge ? 'ring-2 ring-blue-600' : ''}`}
             >
               {plan.badge && (
                 <span className="absolute top-0 right-0 bg-blue-600 text-xs font-semibold px-2 py-1 rounded-tr-lg rounded-bl-lg">
@@ -114,10 +114,8 @@ export default function Pricing() {
                   </li>
                 ))}
               </ul>
-              <Link href={`/contact?plan=${encodeURIComponent(plan.name)}`}>
-                <a className="mt-auto block text-center px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded font-semibold">
-                  {plan.cta ? plan.cta : 'Choose Plan'}
-                </a>
+              <Link href={`/contact?plan=${encodeURIComponent(plan.name)}`} className="mt-auto block text-center px-6 py-4 bg-blue-600 hover:bg-blue-700 rounded font-semibold transition-transform transform hover:scale-105">
+                {plan.cta ? plan.cta : 'Choose Plan'}
               </Link>
             </div>
           )
@@ -130,7 +128,7 @@ export default function Pricing() {
         </svg>
       </div>
 
-      <section className="container mx-auto max-w-3xl mt-16 px-4">
+      <section className="container mx-auto max-w-3xl mt-16 px-4 md:px-8 animate-fadeIn">
         <h2 className="text-3xl font-bold text-center mb-8">Frequently Asked Questions</h2>
         <div className="space-y-4">
           {faqs.map((faq, idx) => (
@@ -140,20 +138,20 @@ export default function Pricing() {
                 onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
                 className="w-full flex items-center justify-between text-left"
               >
-                <span className="text-lg font-medium">{faq.q}</span>
+                <span className="text-lg md:text-xl font-medium">{faq.q}</span>
                 <ChevronDownIcon
                   className={`w-5 h-5 transition-transform ${openFaq === idx ? 'rotate-180' : ''}`}
                 />
               </button>
               {openFaq === idx && (
-                <p className="mt-2 text-gray-300">{faq.a}</p>
+                <p className="mt-2 text-gray-300 text-base md:text-lg">{faq.a}</p>
               )}
             </div>
           ))}
         </div>
       </section>
 
-      <section className="container mx-auto max-w-xl mt-16 px-4">
+      <section className="container mx-auto max-w-xl mt-16 px-4 md:px-8 animate-fadeIn">
         <h3 className="text-2xl font-semibold text-center mb-4">Still have questions?</h3>
         {sent ? (
           <p className="text-center text-green-500">Thanks! We&apos;ll be in touch soon.</p>
@@ -181,7 +179,7 @@ export default function Pricing() {
               rows={3}
               className="w-full p-2 rounded bg-gray-200 text-black"
             />
-            <button type="submit" className="w-full px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded font-semibold">
+            <button type="submit" className="w-full px-6 py-4 bg-blue-600 hover:bg-blue-700 rounded font-semibold transition-transform transform hover:scale-105">
               Send Message
             </button>
           </form>
