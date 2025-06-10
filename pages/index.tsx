@@ -84,25 +84,21 @@ export default function Home() {
 
       <main className="text-white font-sans">
         {/* Hero */}
-        <section className="pt-40 pb-20 px-6">
+        <section className="pt-40 pb-20 px-6 md:px-8 animate-fadeIn">
           <div className="container mx-auto flex flex-col md:flex-row items-center gap-12">
-            <div className="flex-1 text-center md:text-left">
+            <div className="flex-1 text-center">
               <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold mb-6 leading-tight">
                 Never Miss Another Call
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-xl">
                 CallCaddy&apos;s AI receptionist answers instantly, schedules jobs and follows up so you can focus on running your business.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                <Link href="/contact">
-                  <a className="w-full sm:w-auto px-8 py-4 text-lg bg-blue-600 hover:bg-blue-700 rounded-full font-semibold transition shadow">
-                    Get Started — never miss a lead again!
-                  </a>
+              <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                <Link href="/contact" className="w-full sm:w-auto w-40 text-center px-8 py-5 text-lg bg-blue-600 hover:bg-blue-700 rounded-full font-semibold transition-transform transform hover:scale-105 shadow">
+                  Start Now
                 </Link>
-                <Link href="/contact?demo=true">
-                  <a className="w-full sm:w-auto px-8 py-4 text-lg border border-white hover:bg-white hover:text-black rounded-full font-semibold transition">
-                    Book a Demo
-                  </a>
+                <Link href="/contact?demo=true" className="w-full sm:w-auto w-40 text-center px-8 py-5 text-lg border border-white hover:bg-white hover:text-black rounded-full font-semibold transition-transform transform hover:scale-105">
+                  Book a Demo
                 </Link>
               </div>
             </div>
@@ -119,12 +115,12 @@ export default function Home() {
         </section>
 
         {/* Features */}
-        <section className="py-24 md:py-32 px-6 bg-gray-900">
+        <section className="py-24 md:py-32 px-6 md:px-8 bg-gray-900 animate-fadeIn">
           <div className="container mx-auto grid gap-12 sm:grid-cols-2 md:grid-cols-4">
             {features.map((f) => (
               <div
                 key={f.title}
-                className="bg-gray-800 p-8 rounded-lg text-center flex flex-col items-center"
+                className="bg-gray-800 p-8 rounded-lg text-center flex flex-col items-center transition hover:shadow-lg"
               >
                 <f.icon className="w-12 h-12 text-blue-500 mb-4" />
                 <h3 className="text-xl md:text-2xl font-semibold mb-2">
@@ -139,12 +135,12 @@ export default function Home() {
         </section>
 
         {/* How It Works */}
-        <section className="py-24 md:py-32 px-6 bg-black">
+        <section className="py-24 md:py-32 px-6 md:px-8 bg-black animate-fadeIn">
           <div className="container mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-12">How It Works</h2>
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               {steps.map((step) => (
-                <div key={step.text} className="p-6 bg-gray-900 rounded-lg flex flex-col items-center">
+                <div key={step.text} className="p-6 bg-gray-900 rounded-lg flex flex-col items-center transition hover:shadow-lg">
                   <step.icon className="w-12 h-12 text-blue-500 mb-4" />
                   <p className="text-lg text-gray-300">{step.text}</p>
                 </div>
@@ -154,12 +150,12 @@ export default function Home() {
         </section>
 
         {/* Why Choose CallCaddy */}
-        <section className="py-24 md:py-32 px-6 bg-gray-900">
+        <section className="py-24 md:py-32 px-6 md:px-8 bg-gray-900 animate-fadeIn">
           <div className="container mx-auto text-center space-y-8">
             <h2 className="text-2xl md:text-3xl font-bold">Why Choose CallCaddy?</h2>
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               {highlights.map((h) => (
-                <div key={h.title} className="p-6 bg-gray-800 rounded-lg flex flex-col items-center text-gray-300">
+                <div key={h.title} className="p-6 bg-gray-800 rounded-lg flex flex-col items-center text-gray-300 transition hover:shadow-lg">
                   <h.icon className="w-12 h-12 text-blue-500 mb-4" />
                   <h3 className="text-xl font-semibold text-white mb-2">{h.title}</h3>
                   <p className="leading-relaxed">{h.desc}</p>
@@ -170,15 +166,13 @@ export default function Home() {
         </section>
 
         {/* Final CTA */}
-        <section className="py-24 md:py-32 px-6 bg-gray-900">
+        <section className="py-24 md:py-32 px-6 md:px-8 bg-gray-900 animate-fadeIn">
           <div className="container mx-auto text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-6">
               Ready to grow with CallCaddy?
             </h2>
-            <Link href="/contact">
-              <a className="px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-full font-semibold transition shadow">
-                Start now — never miss a lead again!
-              </a>
+            <Link href="/contact" className="px-8 py-5 bg-blue-600 hover:bg-blue-700 rounded-full font-semibold transition-transform transform hover:scale-105 shadow">
+              Start Now
             </Link>
           </div>
         </section>
