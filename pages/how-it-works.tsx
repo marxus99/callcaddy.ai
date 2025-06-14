@@ -46,10 +46,10 @@ export default function HowItWorks() {
       </section>
 
       <section className="py-12 md:py-16 px-6 md:px-8 bg-gray-900 animate-fadeIn">
-        <div className="container mx-auto max-w-3xl space-y-12">
+        <div className="container mx-auto max-w-3xl grid gap-12 justify-items-center text-center">
           {steps.map((step, idx) => (
-            <div key={step.title} className="flex gap-6 transition hover:shadow-lg">
-              <div className="text-3xl font-semibold shrink-0">{idx + 1}.</div>
+            <div key={step.title} className="transition hover:shadow-lg">
+              <div className="text-3xl font-semibold mb-3">{idx + 1}.</div>
               <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
                 <strong className="block text-white text-2xl mb-1">{step.title}</strong>
                 {step.desc}

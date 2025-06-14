@@ -86,8 +86,10 @@ export default function Pricing() {
 
   return (
     <main className="min-h-screen bg-black text-white py-20 md:py-24">
-      <h1 className="text-4xl font-extrabold text-center mb-4">Pricing Plans</h1>
-      <p className="text-center text-gray-300 mb-12">Simple pricing, no hidden fees. Cancel anytime.</p>
+      <div className="container mx-auto text-center px-4 md:px-8">
+        <h1 className="text-4xl font-extrabold mb-4">Pricing Plans</h1>
+        <p className="text-gray-300 mb-12">Simple pricing, no hidden fees. Cancel anytime.</p>
+      </div>
       <div className="container mx-auto grid gap-8 sm:grid-cols-2 lg:grid-cols-4 px-4 md:px-8 animate-fadeIn">
         {plans.map((plan) => {
           const Icon = plan.icon

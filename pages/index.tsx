@@ -87,12 +87,12 @@ export default function Home() {
         {/* Hero */}
         <section className="relative isolate overflow-hidden bg-[#0f172a] pt-40 pb-20 px-6 md:px-8 animate-fadeIn">
           <HeroParticles />
-          <div className="relative z-10 container mx-auto flex flex-col md:flex-row items-center gap-12">
-            <div className="flex-1 text-center">
-              <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold mb-6 leading-tight">
+          <div className="relative z-10 container mx-auto grid md:grid-cols-2 items-center gap-12 text-center">
+            <div className="mx-auto">
+              <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold mb-6 leading-tight max-w-3xl mx-auto">
                 Never Miss Another Call
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-xl">
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-xl mx-auto">
                 CallCaddy&apos;s AI receptionist answers instantly, schedules jobs and follows up so you can focus on running your business.
               </p>
               <div className="flex flex-col sm:flex-row flex-wrap gap-6 justify-center">
@@ -110,7 +110,7 @@ export default function Home() {
                 </a>
               </div>
             </div>
-            <div className="flex-1 flex justify-center mt-10 md:mt-0">
+            <div className="flex justify-center mt-10 md:mt-0">
               <Image
                 src="/hero.svg"
                 alt="AI receptionist illustration"
