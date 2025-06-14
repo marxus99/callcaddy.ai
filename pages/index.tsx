@@ -95,13 +95,31 @@ export default function Home() {
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-xl">
                 CallCaddy&apos;s AI receptionist answers instantly, schedules jobs and follows up so you can focus on running your business.
               </p>
-              <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                <Link href="/contact" className="w-full sm:w-auto w-40 text-center px-8 py-5 text-lg bg-blue-600 hover:bg-blue-700 rounded-full font-semibold transition-transform transform hover:scale-105 shadow">
+              <div className="flex flex-col sm:flex-row flex-wrap gap-6 justify-center">
+                <Link
+                  href="/contact"
+                  className="w-full sm:w-auto w-40 text-center px-8 py-5 text-lg bg-blue-600 hover:bg-blue-700 rounded-full font-semibold transition-transform transform hover:scale-105 shadow"
+                >
                   Start Now
                 </Link>
-                <Link href="/contact?demo=true" className="w-full sm:w-auto w-40 text-center px-8 py-5 text-lg border border-white hover:bg-white hover:text-black rounded-full font-semibold transition-transform transform hover:scale-105">
+                <Link
+                  href="/contact?demo=true"
+                  className="w-full sm:w-auto w-40 text-center px-8 py-5 text-lg border border-white hover:bg-white hover:text-black rounded-full font-semibold transition-transform transform hover:scale-105"
+                >
                   Book a Demo
                 </Link>
+                <a
+                  href="tel:+18884577509"
+                  className="btn btn-primary w-full sm:w-auto w-40 text-center px-8 py-5 text-lg"
+                >
+                  Call Today – Book a Demo
+                </a>
+                <a
+                  href="sms:+18884577509"
+                  className="btn btn-secondary w-full sm:w-auto w-40 text-center px-8 py-5 text-lg"
+                >
+                  Chat with Our AI Agent
+                </a>
               </div>
             </div>
             <div className="flex-1 flex justify-center mt-10 md:mt-0">
